@@ -34,20 +34,20 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add button Add +3 interactivity
      */
-    public void addThreePoints_a (View view) {
+    public void addThreePoints_a (View v) {
         displayForTeamA(pointsScored_a = pointsScored_a + 3);
     }
     /**
      * Add button Add +2 interactivity
      */
-    public void addTwoPoints_a (View view) {
+    public void addTwoPoints_a (View v) {
         displayForTeamA(pointsScored_a = pointsScored_a + 2);
     }
 
     /**
      * Add button Add +3 interactivity
      */
-    public void addFreeThrow_a (View view) {
+    public void addFreeThrow_a (View v) {
         displayForTeamA(pointsScored_a = pointsScored_a + 1);
     }
 
@@ -65,24 +65,24 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add button Add +3 interactivity
      */
-    public void addThreePoints_b (View view) {
+    public void addThreePoints_b (View v) {
         displayForTeamB(pointsScored_b = pointsScored_b + 3);
     }
     /**
      * Add button Add +2 interactivity
      */
-    public void addTwoPoints_b (View view) {
+    public void addTwoPoints_b (View v) {
         displayForTeamB(pointsScored_b = pointsScored_b + 2);
     }
 
     /**
      * Add button Add +3 interactivity
      */
-    public void addFreeThrow_b (View view) {
+    public void addFreeThrow_b (View v) {
         displayForTeamB(pointsScored_b = pointsScored_b + 1);
     }
 
-    public void reset (View view) {
+    public void reset (View v) {
         displayForTeamB(pointsScored_b = 0);
         displayForTeamA(pointsScored_a = 0);
     }

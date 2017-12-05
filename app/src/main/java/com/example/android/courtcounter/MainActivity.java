@@ -7,7 +7,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int pointsScored = 0;
+    //Tracks team A score
+    int pointsScored_a = 0;
+
+    //Tracks team B score
+    int pointsScored_b = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * TEAM A
+     */
 
 
     /**
@@ -27,21 +34,57 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Add button Add +3 interactivity
      */
-    public void addThreePoints (View view) {
-        displayForTeamA(3);
+    public void addThreePoints_a (View view) {
+        displayForTeamA(pointsScored_a = pointsScored_a + 3);
     }
     /**
      * Add button Add +2 interactivity
      */
-    public void addTwoPoints (View view) {
-        displayForTeamA(2);
+    public void addTwoPoints_a (View view) {
+        displayForTeamA(pointsScored_a = pointsScored_a + 2);
     }
 
     /**
      * Add button Add +3 interactivity
      */
-    public void addFreeThrow (View view) {
-        displayForTeamA(1);
+    public void addFreeThrow_a (View view) {
+        displayForTeamA(pointsScored_a = pointsScored_a + 1);
+    }
+
+    /**
+     * TEAM B
+     */
+
+    /**
+     * Displays the given score for Team B.
+     */
+    public void displayForTeamB (int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+        scoreView.setText(String.valueOf(score));
+    }
+    /**
+     * Add button Add +3 interactivity
+     */
+    public void addThreePoints_b (View view) {
+        displayForTeamB(pointsScored_b = pointsScored_b + 3);
+    }
+    /**
+     * Add button Add +2 interactivity
+     */
+    public void addTwoPoints_b (View view) {
+        displayForTeamB(pointsScored_b = pointsScored_b + 2);
+    }
+
+    /**
+     * Add button Add +3 interactivity
+     */
+    public void addFreeThrow_b (View view) {
+        displayForTeamB(pointsScored_b = pointsScored_b + 1);
+    }
+
+    public void reset (View view) {
+        displayForTeamB(pointsScored_b = 0);
+        displayForTeamA(pointsScored_a = 0);
     }
 
 }

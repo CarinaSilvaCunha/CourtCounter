@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.courtcounter.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ghostLayout"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/top_layout"
@@ -18,16 +26,37 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+
+            <EditText
+                android:id="@+id/firstTeamName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:text="Team A"
+                android:hint="First team name"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:maxLines="1"
                 android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:imeOptions="actionDone"/>
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="16dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:fontFamily="sans-serif-medium"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="Team A"-->
+                <!--android:textColor="#616161"-->
+                <!--android:textSize="14sp" />-->
+
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -87,16 +116,33 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
+            <EditText
+                android:id="@+id/secondTeamName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:hint="Second team name"
+                android:inputType="textCapSentences"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                android:imeOptions="actionDone"/>
+
+            <!--<TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
-                android:text="Team B"
+                android:text="First team name"
                 android:textColor="#616161"
-                android:textSize="14sp" />
+                android:textSize="14sp" />-->
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -142,6 +188,7 @@
 
 
     <Button
+        android:id="@+id/mainResetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -149,6 +196,8 @@
         android:layout_marginBottom="32dp"
         android:onClick="reset"
         android:text="Reset" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
 
